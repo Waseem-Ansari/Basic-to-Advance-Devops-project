@@ -16,10 +16,10 @@ jobs:
                 python-version: '3.9'
 
             - name: Install dependencies
-              run: pip install -r requirements.txt
+              run: pip install -r myapp/requirements.txt
 
             - name: Build Docker image
-              run: docker build -t myapp .
+              run: docker build -t myapp ./myapp
 
             - name: Confirm build success
               run: echo "Build completed successfully!"
